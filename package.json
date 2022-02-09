@@ -1,42 +1,43 @@
 {
-  "name": "advancednodeauth",
-  "version": "1.0.0",
-  "description": "Advanced Node Authentication with email(JWT+Password Reset), Passport-Facebook, and Passport-Google Strategies.",
-  "main": "server.js",
-  "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "keywords": [
-    "email+JWT",
-    "passport-google",
-    "passport-facebook",
-    "password",
-    "reset"
-  ],
-  "author": "Okoro John Darlington",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cookie-session": "^2.0.0",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.2",
-    "express-session": "^1.17.2",
-    "express-validator": "^6.14.0",
-    "gravatar": "^1.8.2",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.1.4",
-    "normalize-url": "^7.0.2",
-    "passport": "^0.5.2",
-    "passport-facebook": "^3.0.0",
-    "passport-github-oauth20": "^1.0.4",
-    "passport-google-oauth20": "^2.0.0"
-  },
-  "devDependencies": {
-    "concurrently": "^6.5.1",
-    "nodemon": "^2.0.15"
-  }
+	"name": "advancednodeauth",
+	"version": "1.0.0",
+	"description": "Advanced Node Authentication with email(JWT+Password Reset), Passport-Facebook, and Passport-Google Strategies.",
+	"main": "server.js",
+	"scripts": {
+		"start": "node backend/server.js",
+		"server": "nodemon backend/server.js",
+		"client": "npm start --prefix frontend",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+	},
+	"keywords": [
+		"email+JWT",
+		"passport-google",
+		"passport-facebook",
+		"password",
+		"reset"
+	],
+	"author": "Okoro John Darlington",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"cookie-session": "^2.0.0",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.2",
+		"express-session": "^1.17.2",
+		"express-validator": "^6.14.0",
+		"gravatar": "^1.8.2",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^6.1.4",
+		"normalize-url": "^7.0.2",
+		"passport": "^0.5.2",
+		"passport-facebook": "^3.0.0",
+		"passport-github-oauth20": "^1.0.4",
+		"passport-google-oauth20": "^2.0.0"
+	},
+	"devDependencies": {
+		"concurrently": "^6.5.1",
+		"nodemon": "^2.0.15"
+	}
 }
