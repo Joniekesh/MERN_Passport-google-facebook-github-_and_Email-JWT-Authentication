@@ -184,6 +184,7 @@ form {
 	font-weight: bold;
 	margin-bottom: 1rem;
 	cursor: pointer;
+	border-radius: 8px;
 }
 
 .googleBtn {
@@ -255,5 +256,8 @@ form {
 	.social-login {
 		margin-top: 1rem;
 		width: 100%;
+	}
+	.social-login div {
+		margin-bottom: 5px;
 	}
 }
