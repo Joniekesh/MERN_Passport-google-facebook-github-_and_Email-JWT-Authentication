@@ -11,7 +11,9 @@ const Navbar = ({ user }) => {
 		<>
 			<div className="navbar">
 				<div className="navbar-title">
-					<h2>MERN Authentication</h2>
+					<Link className="link" to="/">
+						<h2>MERN Authentication</h2>
+					</Link>
 				</div>
 				<ul className="navbarList">
 					{user ? (

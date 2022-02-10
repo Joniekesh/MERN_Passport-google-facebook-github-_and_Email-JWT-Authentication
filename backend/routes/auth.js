@@ -126,11 +126,9 @@ router.get("/me", protect, async (req, res) => {
 	}
 });
 
-// @desc   Passport-Google Login
-// @route  GET /auth/google
-// @route  Public
-
-// success login
+// @desc   Passport Login Success
+// @route  GET /auth/login/success
+// @access Private
 router.get("/login/success", (req, res) => {
 	const user = req.user;
 	if (user) {

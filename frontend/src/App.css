@@ -18,6 +18,11 @@ body {
 	color: #fff;
 }
 
+.link {
+	text-decoration: none;
+	color: white;
+}
+
 .navbarList {
 	margin: 0;
 	padding: 0;
