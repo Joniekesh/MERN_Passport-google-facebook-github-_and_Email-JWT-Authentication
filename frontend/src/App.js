@@ -24,7 +24,7 @@ function App() {
 	useEffect(() => {
 		const getUser = () => {
 			if (!token) {
-				fetch("http://localhost:5000/auth/login/success", {
+				fetch("http://mernauthapp101.herokuapp.com/auth/login/success", {
 					method: "GET",
 					credentials: "include",
 					headers: {
@@ -44,7 +44,7 @@ function App() {
 						console.log(err);
 					});
 			} else {
-				fetch("http://localhost:5000/auth/me", {
+				fetch("http://mernauthapp101.herokuapp.com/auth/me", {
 					method: "GET",
 					credentials: "include",
 					headers: {
