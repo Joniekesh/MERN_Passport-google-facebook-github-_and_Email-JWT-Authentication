@@ -11,7 +11,7 @@ module.exports = function (passport) {
 			{
 				clientID: process.env.GOOGLE_CLIENT_ID,
 				clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-				callbackURL: "http://mernauthapp101.herokuapp.com/auth/google/callback",
+				callbackURL: "/auth/google/callback",
 			},
 			async (accessToken, refreshToken, profile, done) => {
 				const userExist = await User.findOne({ socialID: profile.id });
@@ -39,7 +39,7 @@ module.exports = function (passport) {
 			{
 				clientID: process.env.GITHUB_CLIENT_ID,
 				clientSecret: process.env.GITHUB_CLIENT_SECRET,
-				callbackURL: "http://mernauthapp101.herokuapp.com/auth/github/callback",
+				callbackURL: "/auth/github/callback",
 			},
 			async (accessToken, refreshToken, profile, done) => {
 				const userExist = await User.findOne({ socialID: profile.id });
@@ -67,8 +67,7 @@ module.exports = function (passport) {
 			{
 				clientID: process.env.FACEBOOK_APP_ID,
 				clientSecret: process.env.FACEBOOK_APP_SECRET,
-				callbackURL:
-					"http://mernauthapp101.herokuapp.com/auth/facebook/callback",
+				callbackURL: "/auth/facebook/callback",
 			},
 			async (accessToken, refreshToken, profile, done) => {
 				const userExist = await User.findOne({ socialID: profile.id });

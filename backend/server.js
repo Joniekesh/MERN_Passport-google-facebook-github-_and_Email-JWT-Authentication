@@ -6,7 +6,6 @@ const authRoutes = require("./routes/auth");
 const connectDB = require("./config/db");
 require("./config/passport")(passport);
 const cors = require("cors");
-const path = require("path");
 
 const app = express();
 
@@ -27,7 +26,7 @@ app.use(passport.session());
 
 app.use(
 	cors({
-		origin: "http://mernauthapp101.herokuapp.com",
+		origin: "http://localhost:3000",
 		methods: "GET,POST,PUT,DELETE",
 		credentials: true,
 	})
@@ -35,15 +34,6 @@ app.use(
 
 //APIS
 app.use("/auth", authRoutes);
-const _dirname = path.resolve();
-
-if (process.env.NODE_ENV === "production") {
-	app.use(express.static(path.join(_dirname, "/frontend/build")));
-
-	app.get("*", (req, res) => {
-		res.sendFile(path.resolve(_dirname, "frontend", "build", "index.html"));
-	});
-}
 
 const PORT = process.env.PORT || 5000;
 

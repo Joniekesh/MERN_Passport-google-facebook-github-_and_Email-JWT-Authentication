@@ -52,15 +52,15 @@ const RegisterScreen = () => {
 	};
 
 	const googleLogin = () => {
-		window.open("http://mernauthapp101.herokuapp.com/auth/google", "_self");
+		window.open("http://localhost:5000/auth/google", "_self");
 	};
 
 	const facebookLogin = () => {
-		window.open("http://mernauthapp101.herokuapp.com/auth/facebook", "_self");
+		window.open("http://localhost:5000/auth/facebook", "_self");
 	};
 
 	const githubLogin = () => {
-		window.open("http://mernauthapp101.herokuapp.com/auth/github", "_self");
+		window.open("http://localhost:5000/auth/github", "_self");
 	};
 
 	return (

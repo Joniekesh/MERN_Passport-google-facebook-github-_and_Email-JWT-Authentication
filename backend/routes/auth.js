@@ -108,7 +108,7 @@ router.post(
 );
 
 // @desc   Get logged in user profile
-// @route  GET /api/auth
+// @route  GET /api/auth/me
 // @access Private
 router.get("/me", protect, async (req, res) => {
 	try {
@@ -145,7 +145,7 @@ router.get("/login/success", (req, res) => {
 // @access Private
 router.get("/logout", (req, res) => {
 	req.logout();
-	res.redirect("http://mernauthapp101.herokuapp.com");
+	res.redirect("http://localhost:3000");
 });
 
 // @desc  Passport-Google Authentication
@@ -159,7 +159,7 @@ router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
 router.get(
 	"/google/callback",
 	passport.authenticate("google", {
-		successRedirect: "http://mernauthapp101.herokuapp.com/profile",
+		successRedirect: "http://localhost:3000/profile",
 		failureRedirect: "/login/fail",
 	})
 );
@@ -175,7 +175,7 @@ router.get("/github", passport.authenticate("github", { scope: ["profile"] }));
 router.get(
 	"/github/callback",
 	passport.authenticate("github", {
-		successRedirect: "http://mernauthapp101.herokuapp.com/profile",
+		successRedirect: "http://localhost:3000/profile",
 		failureRedirect: "/login/fail",
 	})
 );
@@ -194,7 +194,7 @@ router.get(
 router.get(
 	"/facebook/callback",
 	passport.authenticate("facebook", {
-		successRedirect: "http://mernauthapp101.herokuapp.com/profile",
+		successRedirect: "http://localhost:3000/profile",
 		failureRedirect: "/login/fail",
 	})
 );

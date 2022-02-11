@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ user }) => {
 	const logout = () => {
-		window.open("http://mernauthapp101.herokuapp.com/auth/logout", "_self");
+		window.open("http://localhost:5000/auth/logout", "_self");
 		localStorage.removeItem("token");
 	};
 
